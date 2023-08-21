@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project 1</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; padding: 12px">
+      <div class="id-card" id="idCard">
+        <div class="photo"></div>
+        <div class="info">
+          <h2 id="name">John Doe</h2>
+          <p>Date of Birth: <span id="dob">01/15/1990</span></p>
+          <p>Expiration Date: <span id="expiration">01/15/2030</span></p>
+          <p>License No: <span id="license">123456789</span></p>
+          <p>State: <span id="state">CA</span></p>
+        </div>
+      </div>
+
+      <div class="edit-form">
+        <h2>Edit ID Card Data</h2>
+        <label for="nameInput">Name:</label>
+        <input type="text" id="nameInput" name="name" />
+
+        <label for="dobInput">Date of Birth:</label>
+        <input type="date" id="dobInput" name="dob" />
+
+        <label for="expirationInput">Expiration Date:</label>
+        <input type="date" id="expirationInput" name="expiration" />
+
+        <label for="licenseInput">License No:</label>
+        <input type="text" id="licenseInput" name="license" />
+
+        <label for="stateInput">State:</label>
+        <input type="text" id="stateInput" name="state" />
+
+        <button type="button" id="updateButton" onClick="updateData()">
+          Update
+        </button>
+      </div>
+    </div>
+
+    <script>
+      const editForm = document.querySelector("#editForm");
+      const nameInput = document.querySelector("#nameInput");
+      const dobInput = document.querySelector("#dobInput");
+      const expirationInput = document.querySelector("#expirationInput");
+      const licenseInput = document.querySelector("#licenseInput");
+      const stateInput = document.querySelector("#stateInput");
+
+      const namedata = document.querySelector("#name");
+      const dob = document.querySelector("#dob");
+      const expiration = document.querySelector("#expiration");
+      const license = document.querySelector("#license");
+      const state = document.querySelector("#state");
+
+      const updateButton = document.querySelector("#updateButton");
+
+      const updateData = () => {
+        namedata.textContent = nameInput.value;
+        dob.textContent = dobInput.value;
+        expiration.textContent = expirationInput.value;
+        license.textContent = licenseInput.value;
+        state.textContent = stateInput.value;
+      };
+    </script>
+  </body>
+</html>

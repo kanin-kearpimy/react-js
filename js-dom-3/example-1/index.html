@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS-DOM-3 Example 1</title>
+  </head>
+  <body>
+    <select id="mySelect" onChange="colorSelector(event)">
+      <option value="red-color">Red</option>
+      <option value="white-color">White</option>
+      <option value="blue-color">Blue</option>
+    </select>
+
+    <script>
+      function colorSelector(event) {
+        const selectedValue = event.target.value;
+        alert(selectedValue);
+      }
+    </script>
+  </body>
+</html>

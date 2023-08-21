@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS-DOM-3 Example 3</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="myInput"
+      onChange="userTyping(event)"
+      placeholder="Type something"
+    />
+
+    <h3>Text is below:</h3>
+    <div id="textDiv"></div>
+
+    <script>
+      const input = document.getElementById("myInput");
+      function userTyping(event) {
+        const newValue = event.target.value;
+        const textDiv = document.querySelector("#textDiv");
+        textDiv.innerHTML = newValue;
+      }
+    </script>
+  </body>
+</html>

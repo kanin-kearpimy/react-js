@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-DOM-2 Example 2</title>
+  </head>
+  <body>
+    <input id="fullname" type="text" placeholder="Full Name" />
+    <input id="nickname" type="text" placeholder="NickName" />
+    <button onClick="createHTML()">Submit</button>
+    <div id="dive"></div>
+  </body>
+  <script type="text/javascript">
+    const createHTML = () => {
+      const fullname = document.querySelector("#fullname");
+      const nickname = document.querySelector("#nickname");
+
+      const dive = document.querySelector("#dive");
+      dive.innerHTML =
+        "<h1>" + fullname.value + "</h1>" + "<h4>" + nickname.value + "</h4>";
+    };
+  </script>
+</html>
