@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image URL Display</title>
+    <script>
+      function displayImages() {
+        const imageUploaders = document.querySelectorAll(".image-uploader");
+        const imageDisplay = document.querySelector("#imageDisplay");
+
+        for (let input = 0; input < imageUploaders.length; input++) {
+          imageDisplay.innerHTML += `<img src="${imageUploaders[input].value}" />`;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Image URL Display</h1>
+
+    <input type="text" class="image-uploader" placeholder="Image URL 1" /><br />
+    <input type="text" class="image-uploader" placeholder="Image URL 2" /><br />
+    <input type="text" class="image-uploader" placeholder="Image URL 3" /><br />
+    <input type="text" class="image-uploader" placeholder="Image URL 4" /><br />
+    <input type="text" class="image-uploader" placeholder="Image URL 5" /><br />
+
+    <button onclick="displayImages()">Display Images</button>
+
+    <div id="imageDisplay"></div>
+  </body>
+</html>
