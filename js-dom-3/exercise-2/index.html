@@ -7,31 +7,38 @@
     <input
       type="text"
       id="fullname"
-      onChange="fullNameType(event)"
+      onChange="fullNameType()"
       placeholder="Type something"
     />
 
     <input
       type="text"
       id="nickname"
-      onChange="nickNameType(event)"
+      onChange="nickNameType()"
       placeholder="Type something"
     />
 
     <h3>Fullname:</h3>
-    <div id="fullname-display"></div>
+    <div id="fullnameDisplay"></div>
     <h3>Nickname:</h3>
-    <div id="nickname-display"></div>
+    <div id="nicknameDisplay"></div>
 
     <script>
       const textDiv = document.querySelector("#textDiv");
 
-      function fullNameType(event) {
+      function fullNameType() {
         // write code here
-      }
+        const fullnameSelected = document.getElementById('fullname');
+        const fullnameDisplay = document.getElementById('fullnameDisplay');
+        fullnameDisplay.innerText = fullnameSelected.value;
+        }
+      
 
-      function nickNameType(event) {
+      function nickNameType() {
         // write code here
+        const nicknameSelected = document.getElementById('nickname');
+        const nicknameDisplay = document.getElementById('nicknameDisplay');
+        nicknameDisplay.innerText = nicknameSelected.value;
       }
     </script>
   </body>

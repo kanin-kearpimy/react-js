@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Project</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div class="id-card">
+        <img class="photo" id="imageDisplay" src="" alt="" />
+        <div class="info">
+            <h3 id="nameDisplay">Firstname Lastname</h3>
+            <p><strong>Date of Birth:</strong><span id="dobDisplay">12/21/1969</span></p>
+            <p><strong>Expiration Date:</strong> <span id="expDisplay">12/21/2023</span></p>
+            <p><strong>License no:</strong> <span id="licenseDisplay">9999999</span></p>
+            <p><strong>State:</strong> <span id="stateDisplay">VI</span></p>
+        </div>
+    </div>
+    <div id="info-update">
+        <h3>Add new data</h3>
+        <div>
+            <label for="name">Fullname:</label>;
+            <input type="text" id="nameInput" name="name" />
+        </div>
+        <div>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dobInput" name="dob" />
+        </div>
+        <div>
+            <label for="exp">Expiration Date:</label>
+            <input type="date" id="expInput" name="exp" />
+        </div>
+        <div>
+            <label for="license">License no:</label>
+            <input type="text" id="licenseInput" name="license" />
+        </div>
+        <div>
+            <label for="state">State:</label>
+            <input type="text" id="stateInput" name="state" />
+        </div>
+        <div>
+            <label for="image">Image URL:</label>
+            <input type="url" id="imageInput" name="image" />
+        </div>
+        <button type="button" id="update-btn" onclick="updateData()">Update</button>
+    </div>
+    <script>
+        const nameSelected = document.querySelector('#nameInput');
+        const dobSelected = document.querySelector('#dobInput');
+        const expSelected = document.querySelector('#expInput');
+        const licenseSelected = document.querySelector('#licenseInput');
+        const stateSelected = document.querySelector('#stateInput');
+        const imgSelected = document.querySelector('#imageInput');
+
+
+        const nameDisplay = document.querySelector('#nameDisplay');
+        const dobDisplay = document.querySelector('#dobDisplay');
+        const expDisplay = document.querySelector('#expDisplay');
+        const licenseDisplay = document.querySelector('#licenseDisplay');
+        const stateDisplay = document.querySelector('#stateDisplay');
+        const imageDisplay = document.querySelector('#imageDisplay');
+
+
+      function updateData() {
+        // write code here
+        nameDisplay.innerHTML = nameSelected.value;
+        dobDisplay.innerHTML = dobSelected.value;
+        expDisplay.innerHTML = expSelected.value;
+        licenseDisplay.innerHTML = licenseSelected.value.toUpperCase();
+        stateDisplay.innerHTML = stateSelected.value.toUpperCase();
+        imageDisplay.setAttribute('src',imgSelected.value);
+      }
+    </script>
+</body>
+</html>
