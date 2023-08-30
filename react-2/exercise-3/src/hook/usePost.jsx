@@ -39,6 +39,11 @@ const usePost = () => {
   const [posts, setPosts] = useState(postsData);
 
   const create = (data) => {
+    /**
+     * Create a new post and add it to the list.
+     * @param {id, author, avatar, time, content, image} data - The post data to be created.
+     *
+     */
     if (typeof data !== "object") {
       alert("Please input object of feed-post");
       return;
@@ -54,10 +59,21 @@ const usePost = () => {
   };
 
   const get = () => {
+    /**
+     * Retrieve the list of posts.
+     * @returns {Array} The array of posts.
+     * Example
+     * const data = get()
+     * variable: `data` is array of postsData above
+     */
     return posts;
   };
 
   const update = (data) => {
+    /**
+     * Update an existing post in the list.
+     * @param {id, author, avatar, time, content, image} data - The updated post data.
+     */
     if (typeof data !== "object") {
       alert("Please input object of feed-post");
       return;
@@ -81,6 +97,12 @@ const usePost = () => {
   };
 
   const remove = (id) => {
+    /**
+     * Removes a post with a specific ID from the list of posts and updates the state.
+     * @param {string} id - The unique identifier of the post to be removed.
+     * Example
+     * remove('id-001') mean remove post which has `id` == 'id-001'
+     */
     const updatedData = posts.filter((item) => item.id !== id);
     setPosts(updatedData);
   };
