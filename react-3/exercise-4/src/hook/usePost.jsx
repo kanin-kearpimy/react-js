@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const KEYS = ["author", "avatar", "time", "content", "image"];
+const KEYS = ["id", "author", "avatar", "time", "content", "image"];
 
 const postsData = [
   {
