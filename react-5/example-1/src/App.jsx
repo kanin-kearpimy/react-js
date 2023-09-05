@@ -8,7 +8,7 @@ const App = () => {
 
   useEffect(() => {
     const getData = async () => {
-      const response = await axios(
+      const response = await axios.get(
         "https://jsd5-mock-backend.onrender.com/members"
       );
       setMembers(response.data);
