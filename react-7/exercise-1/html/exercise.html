@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .feed {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .post {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 15px;
+      }
+
+      .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .post-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .post-author {
+        font-weight: bold;
+      }
+
+      .post-time {
+        color: #777;
+      }
+
+      .post-content {
+        margin-top: 5px;
+      }
+
+      .post-image {
+        max-width: 100%;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+      }
+
+      .post-container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: #fff;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 20px;
+      }
+
+      .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .post-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .post-author {
+        font-weight: bold;
+      }
+
+      .post-content {
+        margin-top: 10px;
+      }
+
+      .post-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        resize: vertical;
+        outline: none;
+      }
+
+      .post-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .post-button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .post-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <title>Facebook-like Feed</title>
+  </head>
+  <body>
+    <div class="post-container">
+      <div class="post-header">
+        <img class="post-avatar" src="avatar.jpg" alt="Your Avatar" />
+        <div class="post-author">You</div>
+      </div>
+      <div class="post-content">
+        <textarea
+          class="post-input"
+          placeholder="What's on your mind?"
+        ></textarea>
+      </div>
+      <div class="post-actions">
+        <button class="post-button">Post</button>
+      </div>
+    </div>
+
+    <div class="feed">
+      <div class="post">
+        <div class="post-header">
+          <img
+            class="post-avatar"
+            src="https://cdn.pixabay.com/photo/2017/09/01/00/15/png-2702691_640.png"
+            alt="User 1"
+          />
+          <div>
+            <div class="post-author">User 1</div>
+            <div class="post-time">2 hours ago</div>
+          </div>
+        </div>
+        <div class="post-content">This is my first post! 🎉</div>
+        <img
+          class="post-image"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png"
+          alt="Post 1"
+        />
+        <button>DELETE</button>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img
+            class="post-avatar"
+            src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
+            alt="User 2"
+          />
+          <div>
+            <div class="post-author">User 2</div>
+            <div class="post-time">4 hours ago</div>
+          </div>
+        </div>
+        <div class="post-content">Enjoying a beautiful day outdoors! ☀️</div>
+        <img
+          class="post-image"
+          src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
+          alt="Post 2"
+        />
+        <button>DELETE</button>
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <img
+            class="post-avatar"
+            src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
+            alt="User 3"
+          />
+          <div>
+            <div class="post-author">User 3</div>
+            <div class="post-time">1 day ago</div>
+          </div>
+        </div>
+        <div class="post-content">Exploring new places and cultures. 🌍✈️</div>
+        <img
+          class="post-image"
+          src="https://images.rawpixel.com/image_png_social_square/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvcm00NTYtMDA3YS5wbmc.png"
+          alt="Post 3"
+        />
+        <button>DELETE</button>
+      </div>
+    </div>
+  </body>
+</html>
