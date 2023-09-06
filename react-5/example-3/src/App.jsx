@@ -6,6 +6,7 @@ import Form from "./Form";
 
 const App = () => {
   const [members, setMembers] = useState([]);
+  const [reload, setReload] = useState(false);
 
   useEffect(() => {
     const getData = async () => {
@@ -16,18 +17,23 @@ const App = () => {
     };
 
     getData();
-  }, []);
+  }, [reload]);
 
   const createData = async (name, age, weight, status) => {
+    const requestData = {
+      name: name,
+      age: age,
+      weight: weight,
+      status: status,
+    };
     const response = await axios.post(
       "https://jsd5-mock-backend.onrender.com/members",
-      {
-        name: name,
-        age: age,
-        weight: weight,
-        status: status,
-      }
+      requestData
     );
+
+    if (response.status === 200) {
+      setReload(!reload);
+    }
 
     console.log(response);
   };

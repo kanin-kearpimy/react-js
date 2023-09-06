@@ -1,0 +1,33 @@
+/* Basic styling for the card */
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the labels */
+.label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* Styling for the data */
+.data {
+  margin-bottom: 15px;
+}
