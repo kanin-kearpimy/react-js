@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 class App extends React.Component {
   render() {
@@ -12,13 +12,13 @@ class App extends React.Component {
   }
 }
 
-// Code below!!!!
-
 class Header extends React.Component {
   render() {
     return (
-      // Code here
-      // <Header />
+      <header>
+        <span>Turn on / off</span>
+        <p>Current Temperature: XXX</p>
+      </header>
     );
   }
 }
@@ -26,8 +26,9 @@ class Header extends React.Component {
 class Content extends React.Component {
   render() {
     return (
-      // Code here
-      // <Content />
+      <main>
+        <Temperature />
+      </main>
     );
   }
 }
@@ -35,8 +36,9 @@ class Content extends React.Component {
 class Temperature extends React.Component {
   render() {
     return (
-      // Code here
-      // <Temperature />
+      <div id="temperature">
+        <span>{this.temperature} Oc</span>
+      </div>
     );
   }
 }
@@ -44,8 +46,10 @@ class Temperature extends React.Component {
 class Footer extends React.Component {
   render() {
     return (
-      // Code here
-      // <Footer />
+      <footer>
+        <button>Up</button>
+        <button>Down</button>
+      </footer>
     );
   }
 }
